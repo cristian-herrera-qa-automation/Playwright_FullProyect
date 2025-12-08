@@ -1,0 +1,69 @@
+GetAltbyText --> USAR PARA CAPTURAR EL "ALT" DE UNA IMAGEN SI ES Q ESTÁ NO CARGA O PARA PERSONAS NO VIDENTES.
+await page.locator(xxxx).press("Enter"); --> PARA PULSAR LA TECLA Enter
+
+// WEB // ✅
+npx playwright codegen www.freerangetesters.com   -- MUY BUENO COMO CYPRESS PARA DESKTOP.
+
+// MOBILE // 📱
+npx playwright codegen --device="iPhone 15 Pro Max" www.freerangetesters.com   -- MUY BUENO COMO CYPRESS PARA MOBILE.
+npx playwright codegen Iphone.spec.ts --headed --debug --> PARA DEBUGEAR
+npx playwright test Iphone.spec.ts  -- LO EJECUTO NORMALMENTE.
+
+// TABLET O IPAD // 💻
+npx playwright codegen --device="iPad Pro 11 landscape" www.freerangetesters.com  -- Y ESTE PARA IPAD O TABLET.
+
+
+
+ASSERTIONS
+tocontainstext --> USAR PARA QUE HAGA MATCH CON ESA PARTECITA DEL COMIENZO SI ES Q EL TEXTO ES MUY LARGO.
+yohavetext --> MATCHEA TODO EL TEXTO COMPLETO.TIENE Q MATCHEAR EXACTAMENTE IGUAL.
+tohavevalue --> USAR PARA VERIFICAR QUE UN INPUT POR EJEMPLO TENGA EL TEXTO QUE HAYA ESCRITO EN ÉL.
+
+Mobile:
+Si queremos ejecutar los test dependiendo cada project.
+
+npx playwright test --project=Iphone
+npx playwright test --project=Tablet
+npx playwright test --project=Computadora
+
+
+page.locator("#asd123").nth(0) -- para capturar el primer elemento que encuentre.
+page.locator("#asd123").nth(1) -- para capturar el segundo elemento que encuentre.
+Y ASI SUCESIVAMENTE. ✅
+
+// npx playwright test Udemy.spec.ts --ui
+
+
+// ALLURE REPORTER // ✅💯
+
+ INSTALAR:
+ npm install -D allure-playwright
+
+ CONFIGURAR:
+ playwright.config.ts 🚀
+ export default defineConfig({
+ reporter: 'allure-playwright',
+});
+
+ PARA LIMPIAR DE LA CORRIDA ANTERIOR:
+ allure generate ./allure-results -o ./allure-report --clean
+
+ PARA GENERAR EL REPORTE:
+ allure generate ./allure-results -o ./allure-report
+
+ PARA ABRIR EL REPORTE:
+ allure open ./allure-report
+
+
+// JENKINS //
+
+1°ABRIR LA CMD EN LA CARPETA "DESCARGAS" XQ ES DONDE ESTA EL ARCHIVO JENKINS.WAR
+2° EJECUTAR LA CMD "java -jar jenkins.war"
+3° ABRIR LOCALHOST:8080
+
+
+
+
+
+
+

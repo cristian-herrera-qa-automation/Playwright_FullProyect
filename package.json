@@ -1,0 +1,29 @@
+{
+  "name": "playwright_ecoomers",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test:master": "npx test --grep @master",
+    "test:sanity": "npx playwright test --grep @sanity",
+    "test:regression": "npx playwright test --grep @regression",
+    "test:datadriven": "npx playwright test --grep @datadriven",
+    "test:master:headed": "npx playwright test --grep @master --headed",
+    "test:sanity:debug": "npx playwright test --grep @sanity --debug",
+    "test:alltest": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^24.10.1",
+    "allure-playwright": "^3.4.3"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.1.0",
+    "csv-parse": "^6.1.0",
+    "xlsx": "^0.18.5"
+  }
+}
