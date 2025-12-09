@@ -11,7 +11,7 @@
     "test:master:headed": "npx playwright test --grep @master --headed",
     "test:sanity:debug": "npx playwright test --grep @sanity --debug",
     "test:alltestUI": "npx playwright test",
-    "test:alltestHeaded": "npx playwright test --headed"
+    "test:alltestHeaded": "npx playwright test"
   },
   "keywords": [],
   "author": "",
