@@ -4,10 +4,10 @@ export default defineConfig({
   timeout: 30 * 1000, //30000 ms(30 secs)
   testDir: "./tests",
   fullyParallel: false,
-  //retries: process.env.CI ? 2 : 0,
-  retries: 1,
-  //workers: process.env.CI ? 1 : undefined,
-  workers: 1,
+  retries: process.env.CI ? 1 : 0,
+  //retries: 1,
+  workers: process.env.CI ? 1 : undefined,
+  //workers: 1,
 
   // reporter: "allure-playwright",
   reporter: "html",
@@ -16,6 +16,7 @@ export default defineConfig({
   // ['list']
 
   use: {
+    baseURL: process.env.BASE_URL || "http://localhost/opencart/upload",
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "retain-on-failure",

@@ -7,6 +7,11 @@ jobs:
     timeout-minutes: 60
     runs-on: windows-latest
 
+    env:
+      # ✅ URL accesible desde GitHub Actions
+      BASE_URL: http://localhost/opencart/upload
+      CI: true
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
