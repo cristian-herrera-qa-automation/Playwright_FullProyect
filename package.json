@@ -10,7 +10,8 @@
     "test:datadriven": "npx playwright test --grep @datadriven",
     "test:master:headed": "npx playwright test --grep @master --headed",
     "test:sanity:debug": "npx playwright test --grep @sanity --debug",
-    "test:alltest": "npx playwright test"
+    "test:alltestUI": "npx playwright test",
+    "test:alltestHeaded": "npx playwright test --headed"
   },
   "keywords": [],
   "author": "",
