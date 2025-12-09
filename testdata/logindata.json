@@ -7,8 +7,8 @@
   },
   {
     "testName": "Invalid login",
-    "email": "abcxyz12345678@xyz.com",
-    "password": "abcxyx1235678!",
+    "email": "abcxyz123!!@xyz.com",
+    "password": "abcxyx!!",
     "expected": "failure"
   }
 ]
