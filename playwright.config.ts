@@ -9,8 +9,8 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   //workers: 1,
 
-  reporter: "allure-playwright",
-  //reporter: "html",
+  //reporter: "allure-playwright",
+  reporter: "html",
   // ['html'],
   // ['dot'],
   // ['list']
